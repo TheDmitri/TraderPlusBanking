@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{1F65464C5F552A03}Workbench Images/AccountsImage.edds"
+ Author "desktop-37nuhu1"
+ ChangeDate -1957908198
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "AccountsImage.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

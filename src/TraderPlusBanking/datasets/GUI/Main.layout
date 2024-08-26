@@ -1,0 +1,166 @@
+FrameWidgetClass "Background frame" {
+ disabled 0
+ inheritalpha 0
+ ignorepointer 0
+ ignoregloballv 0
+ color 0.0353 0.0353 0.0353 1
+ position 0 0
+ size 577 385
+ halign center_ref
+ valign center_ref
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  PanelWidgetClass "BackBox Backgorund" {
+   ignorepointer 1
+   color 0.1098 0.1098 0.1098 1
+   size 577 385
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DA_Smooth_Small_10px
+  }
+  FrameWidgetClass "Sub Frame" {
+   ignorepointer 1
+   size 549 357
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   {
+    PanelWidgetClass "Background Color Sub" {
+     ignorepointer 1
+     color 0.0863 0.0863 0.0863 1
+     position 0 0
+     size 549 357
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style DA_Smooth_Small_10px
+    }
+    TextWidgetClass "Main Text" {
+     visible 1
+     disabled 0
+     inheritalpha 0
+     ignorepointer 1
+     position 0 -137.25999
+     size 150 40
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Normal
+     text "Banking"
+     font "gui/fonts/metronbook"
+     "text halign" center
+     "text valign" center
+    }
+    ButtonWidgetClass "Exit Button" {
+     color 1 0 0 1
+     position 0 0
+     size 27 27
+     halign right_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     scriptclass "ViewBinding"
+     style DA_Smooth10px_Colored
+     text "X"
+     font "gui/fonts/amorserifpro"
+     switch normal
+     {
+      ScriptParamsClass {
+      }
+     }
+    }
+    PanelWidgetClass "User Accounts Panel" {
+     ignorepointer 1
+     color 0.1882 0.1882 0.1882 1
+     position 0 -45
+     size 490 98
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style DA_Smooth_Small_10px
+     {
+      ImageWidgetClass "Accounts Image" {
+       ignorepointer 1
+       position 15 0
+       size 48 48
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{1F65464C5F552A03}Workbench Images/AccountsImage.edds"
+       mode opaque
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
+      }
+      TextWidgetClass "User Accounts" {
+       ignorepointer 1
+       position -75 -10
+       size 200 34
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Normal
+       text "User Accounts"
+       font "gui/fonts/metron48"
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass "Sub Text" {
+       ignorepointer 1
+       position -7 12
+       size 325 20
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Personal accounts for all your currencies"
+       font "gui/fonts/metron-italic28"
+      }
+      ImageWidgetClass ImageWidget0 {
+       ignorepointer 1
+       position 207 0
+       size 64 48
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{0069E4EEB0032DC6}Workbench Images/Button Triangle.edds"
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
+      }
+     }
+    }
+   }
+  }
+ }
+}

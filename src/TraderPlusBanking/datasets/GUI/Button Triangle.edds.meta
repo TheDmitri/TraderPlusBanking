@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{0069E4EEB0032DC6}Workbench Images/Button Triangle.edds"
+ Author "desktop-37nuhu1"
+ ChangeDate -1076580070
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Button Triangle.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
