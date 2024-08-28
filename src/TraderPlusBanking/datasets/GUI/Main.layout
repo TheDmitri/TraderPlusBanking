@@ -216,7 +216,7 @@ FrameWidgetClass "Background frame" {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{3E352C62A0D28950}Workbench Images/shared.edds"
+         imageTexture "{3E352C62A0D28950}TraderPlusBanking/datasets/GUI/shared.edds"
          mode opaque
          "clamp mode" clamp
          "stretch mode" stretch_w_h
@@ -232,7 +232,7 @@ FrameWidgetClass "Background frame" {
          hexactsize 0
          vexactsize 0
          style Normal
-         text "User Accounts"
+         text "Shared Accounts"
          font "gui/fonts/etelkatextpro28"
          "exact text" 1
          "size to text h" 1
@@ -250,7 +250,7 @@ FrameWidgetClass "Background frame" {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         text "Personal accounts for all your currencies"
+         text "Shared accounts between users"
          font "gui/fonts/etelkatextpro16"
          "exact text" 1
          "text valign" center
