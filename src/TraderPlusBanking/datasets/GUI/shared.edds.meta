@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{3E352C62A0D28950}Workbench Images/shared.edds"
+ Author "desktop-37nuhu1"
+ ChangeDate -1228099300
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "shared.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

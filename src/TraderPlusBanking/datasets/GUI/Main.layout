@@ -15,7 +15,7 @@ FrameWidgetClass "Background frame" {
  {
   PanelWidgetClass "BackBox Backgorund" {
    ignorepointer 1
-   color 0.1098 0.1098 0.1098 1
+   color 0 0 0 0.9765
    position 0 0
    size 0.998 1.001
    halign center_ref
@@ -39,9 +39,9 @@ FrameWidgetClass "Background frame" {
    {
     PanelWidgetClass "Background Color Sub" {
      ignorepointer 1
-     color 0.0863 0.0863 0.0863 1
+     color 0 0 0 0.3686
      position 0 0
-     size 1 0.999
+     size 1 1
      halign center_ref
      valign center_ref
      hexactpos 0
@@ -55,8 +55,8 @@ FrameWidgetClass "Background frame" {
      disabled 0
      inheritalpha 0
      ignorepointer 1
-     position 0 -0.384
-     size 0.273 0.112
+     position 0 -0.37
+     size 0.703 0.15
      halign center_ref
      valign center_ref
      hexactpos 0
@@ -65,7 +65,9 @@ FrameWidgetClass "Background frame" {
      vexactsize 0
      style Normal
      text "Banking"
-     font "gui/fonts/metronbook"
+     font "gui/fonts/metronlight48"
+     "exact text" 1
+     "size to text h" 1
      "text halign" center
      "text valign" center
     }
@@ -79,15 +81,14 @@ FrameWidgetClass "Background frame" {
      hexactsize 1
      vexactsize 1
      scriptclass "ViewBinding"
-     style Empty
+     style DA_Smooth5px_Colored
      text "X"
      font "gui/fonts/etelkatextpro16"
      switch normal
     }
-    PanelWidgetClass "User Accounts Panel" {
-     ignorepointer 1
+    ButtonWidgetClass "User Button" {
      color 0.1882 0.1882 0.1882 1
-     position 0 -0.126
+     position 0 -0.056
      size 0.892 0.274
      halign center_ref
      valign center_ref
@@ -95,72 +96,183 @@ FrameWidgetClass "Background frame" {
      vexactpos 0
      hexactsize 0
      vexactsize 0
-     style DA_Smooth_Small_10px
+     style DA_Smooth10px_Colored
      {
-      ImageWidgetClass "Accounts Image" {
+      PanelWidgetClass "User Accounts Panel" {
        ignorepointer 1
-       position 0.03 0
-       size 0.098 0.49
-       valign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 0
-       vexactsize 0
-       imageTexture "{1F65464C5F552A03}Workbench Images/AccountsImage.edds"
-       mode opaque
-       "clamp mode" clamp
-       "stretch mode" stretch_w_h
-      }
-      TextWidgetClass "User Accounts" {
-       ignorepointer 1
-       position -0.18446 -0.18072
-       size 0.408 0.347
+       color 0.1882 0.1882 0.1882 1
+       position 0 0
+       size 1 1
        halign center_ref
        valign center_ref
        hexactpos 0
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       style Normal
-       text "User Accounts"
-       font "gui/fonts/etelkatextpro28"
-       "exact text" 1
-       "size to text h" 1
-       "size to text v" 1
-       "text valign" center
+       style DA_Smooth_Small_10px
+       {
+        ImageWidgetClass "Accounts Image" {
+         ignorepointer 1
+         position 0.03 0
+         size 0.098 0.49
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{1F65464C5F552A03}TraderPlusBanking/datasets/GUI/AccountsImage.edds"
+         mode opaque
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+        TextWidgetClass "User Accounts" {
+         ignorepointer 1
+         position -0.18446 -0.18072
+         size 0.408 0.347
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Normal
+         text "User Accounts"
+         font "gui/fonts/etelkatextpro28"
+         "exact text" 1
+         "size to text h" 1
+         "size to text v" 1
+         "text valign" center
+        }
+        TextWidgetClass "Sub Text" {
+         ignorepointer 1
+         color 1 1 1 0.8
+         position -0.014 0.123
+         size 0.664 0.144
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         scaled 1
+         text "Personal accounts for all your currencies"
+         font "gui/fonts/etelkatextpro16"
+         "text color" 1 1 1 0.8
+         "exact text" 1
+         "text valign" center
+        }
+        ImageWidgetClass "Arrow User" {
+         ignorepointer 1
+         position 0.03 0
+         size 64 48
+         halign right_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 1
+         imageTexture "{0069E4EEB0032DC6}TraderPlusBanking/datasets/GUI/Button Triangle.edds"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+         filter 1
+        }
+       }
       }
-      TextWidgetClass "Sub Text" {
+     }
+    }
+    ButtonWidgetClass "Shared Button" {
+     color 0.1882 0.1882 0.1882 1
+     position 0 0.284
+     size 0.892 0.274
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style DA_Smooth10px_Colored
+     {
+      PanelWidgetClass "Shared Accounts Panel" {
        ignorepointer 1
-       color 1 1 1 0.8
-       position -0.014 0.123
-       size 0.664 0.204
+       color 0.1882 0.1882 0.1882 1
+       position 0 0
+       size 1 1
        halign center_ref
        valign center_ref
        hexactpos 0
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       text "Personal accounts for all your currencies"
-       font "gui/fonts/etelkatextpro16"
-       "exact text" 1
-       "text valign" center
-      }
-      ImageWidgetClass ImageWidget0 {
-       ignorepointer 1
-       position 0.03 0
-       size 64 48
-       halign right_ref
-       valign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 1
-       vexactsize 1
-       imageTexture "{0069E4EEB0032DC6}Workbench Images/Button Triangle.edds"
-       mode blend
-       "src alpha" 1
-       "clamp mode" clamp
-       "stretch mode" stretch_w_h
-       filter 1
+       style DA_Smooth_Small_10px
+       {
+        ImageWidgetClass "Shared Image" {
+         ignorepointer 1
+         position 0.03 0
+         size 0.098 0.49
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{3E352C62A0D28950}Workbench Images/shared.edds"
+         mode opaque
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+        TextWidgetClass "Shared Accounts" {
+         ignorepointer 1
+         position -0.18446 -0.18072
+         size 0.408 0.347
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Normal
+         text "User Accounts"
+         font "gui/fonts/etelkatextpro28"
+         "exact text" 1
+         "size to text h" 1
+         "size to text v" 1
+         "text valign" center
+        }
+        TextWidgetClass "Sub Text Shared" {
+         ignorepointer 1
+         color 1 1 1 0.8
+         position -0.014 0.123
+         size 0.664 0.145
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Personal accounts for all your currencies"
+         font "gui/fonts/etelkatextpro16"
+         "exact text" 1
+         "text valign" center
+        }
+        ImageWidgetClass "Arrow Shared Account" {
+         ignorepointer 1
+         position 0.03 0
+         size 64 48
+         halign right_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 1
+         imageTexture "{0069E4EEB0032DC6}TraderPlusBanking/datasets/GUI/Button Triangle.edds"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+         filter 1
+        }
+       }
       }
      }
     }
