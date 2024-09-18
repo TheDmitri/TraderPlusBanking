@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{55293DEC4F0D5A24}Workbench Images/Info.edds"
+ Name "{D9C414107C31E996}Workbench Images/Deposit.edds"
  Author "desktop-37nuhu1"
- ChangeDate -888999646
+ ChangeDate 1689989410
  Configurations {
   PNGResourceClass PC {
-   SourceFile "Info.png"
+   SourceFile "Deposit.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

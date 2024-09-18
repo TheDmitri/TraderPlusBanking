@@ -34,7 +34,7 @@ FrameWidgetClass MainFrame {
       TextWidgetClass Banking {
        ignorepointer 1
        position 0.0225 0
-       size 0.131 0.508
+       size 0.391 0.508
        valign center_ref
        hexactpos 0
        vexactpos 0
@@ -127,14 +127,14 @@ FrameWidgetClass MainFrame {
       PanelWidgetClass BackgroundColorSubFrame {
        ignorepointer 1
        color 0 0 0 0.9216
-       position 0 0
-       size 1156 535
+       position -0.00151 -0.00408
+       size 1 1
        halign center_ref
        valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
        style DA_Smooth_Small_10px
       }
       ButtonWidgetClass ExitButton {
@@ -174,6 +174,541 @@ FrameWidgetClass MainFrame {
        font "gui/fonts/metronlight28"
        "exact text" 1
        "text valign" center
+      }
+      FrameWidgetClass BalanceFrame {
+       ignorepointer 1
+       color 0 0 0 1
+       position 0.01 -0.276
+       size 0.328 0.205
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        PanelWidgetClass BackgroundColorBalanceFrame {
+         ignorepointer 1
+         color 0.1882 0.1882 0.1882 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style DA_Smooth_Small_10px
+        }
+        TextWidgetClass BalanceMain {
+         ignorepointer 1
+         color 1 1 1 0.8
+         position 0 -0.3
+         size 1 0.259
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Bold
+         text "BALANCE"
+         font "gui/fonts/metronlight28"
+         "exact text" 1
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass ActualBalance {
+         ignorepointer 1
+         position 0 0.09
+         size 1 0.639
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Bold
+         text "$ 1.000.000.000"
+         font "gui/fonts/metronbook-bold48"
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      FrameWidgetClass IBANFrame {
+       ignorepointer 1
+       position 0.01 -0.046
+       size 0.328 0.205
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        PanelWidgetClass BackgroundColorIBANColor {
+         ignorepointer 1
+         color 0.1961 0.1961 0.1961 0.0784
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style DA_Smooth_Small_10px
+        }
+        TextWidgetClass IBAN {
+         ignorepointer 1
+         color 1 1 1 0.8
+         position 0.03 -0.29
+         size 0.9 0.259
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Bold
+         text "IBAN"
+         font "gui/fonts/metronlight28"
+         "exact text" 1
+         "text halign" center
+         "text valign" center
+        }
+        ImageWidgetClass CreditCardImage {
+         ignorepointer 1
+         position 0.365 0.104
+         size 0.08 0.21
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{3D1B8208F6FB3514}Workbench Images/IBAN.edds"
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+        TextWidgetClass CreditAccount {
+         ignorepointer 1
+         position 0 0.07
+         size 1 0.409
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "3EDTG34"
+         font "gui/fonts/metronlight28"
+         "text color" 0.1176 0.1176 0.1176 1
+         "exact text" 1
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      ImageWidgetClass ActionsImage {
+       ignorepointer 1
+       position 0.01 0.11
+       size 0.03 0.06
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{11DD5B9820E64CF7}Workbench Images/Actions.edds"
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
+      }
+      TextWidgetClass Actions {
+       ignorepointer 1
+       position 0.04 0.1125
+       size 0.1 0.08
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Actions"
+       font "gui/fonts/metronlight28"
+       "text halign" center
+       "text valign" center
+      }
+      GridSpacerWidgetClass ActionsGrid {
+       ignorepointer 1
+       position 0.01 0.323
+       size 0.328 0.32
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       Padding 10
+       Margin 4
+       content_halign center
+       content_valign center
+       Columns 1
+       {
+        ButtonWidgetClass "Deposit Button" {
+         color 0.851 0.851 0.851 1
+         position 10 10
+         size 48 48
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         style DA_Smooth10px_Colored
+         text "Deposit"
+         font "gui/fonts/metronbook28"
+         "text color" 0 0 0 1
+         {
+          ImageWidgetClass "Depsoit Image" {
+           ignorepointer 1
+           position 0.19 0
+           size 0.159 1.006
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           imageTexture "{D9C414107C31E996}Workbench Images/Deposit.edds"
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
+          }
+         }
+        }
+        ButtonWidgetClass "Withdraw Button" {
+         color 0.851 0.851 0.851 1
+         position 10 10
+         size 48 48
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         style DA_Smooth10px_Colored
+         text "Withdraw"
+         font "gui/fonts/metronbook28"
+         "text color" 0 0 0 1
+         {
+          ImageWidgetClass "Withdraw Image" {
+           ignorepointer 1
+           position 0.2 0
+           size 0.129 1.006
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           imageTexture "{131D4D9C8415C7CC}Workbench Images/Withdraw.edds"
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
+          }
+         }
+        }
+        ButtonWidgetClass "Transfer Button" {
+         color 0.851 0.851 0.851 1
+         position 10 10
+         size 48 48
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         style DA_Smooth10px_Colored
+         text "Transfer"
+         font "gui/fonts/metronbook28"
+         "text color" 0 0 0 1
+         {
+          ImageWidgetClass "Transfer Image" {
+           ignorepointer 1
+           position 0.2 0
+           size 0.129 1.006
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           imageTexture "{90307A93ECB1ABA6}Workbench Images/Transfer.edds"
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
+          }
+         }
+        }
+       }
+      }
+      TextWidgetClass "Transaction History" {
+       ignorepointer 1
+       position 0.15 0.025
+       size 0.25 0.09
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Bold
+       text "Transactions History"
+       font "gui/fonts/metronlight28"
+       "exact text" 1
+      }
+      ImageWidgetClass "Transaction History Image" {
+       ignorepointer 1
+       position 0 0.02
+       size 0.032 0.06
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{016B7D40D4568624}Workbench Images/TransactionHistory.edds"
+       mode opaque
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
+      }
+      FrameWidgetClass BaseGridFrame {
+       ignorepointer 1
+       position 0.2 0.13
+       size 0.571 0.09
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        PanelWidgetClass "Base Grid Color" {
+         ignorepointer 1
+         color 0.1882 0.1882 0.1882 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style DA_Smooth_Small_10px
+        }
+        GridSpacerWidgetClass "Base Grid Transaction History" {
+         ignorepointer 1
+         color 0.1882 0.1882 0.1882 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Empty
+         content_halign center
+         content_valign center
+         Columns 5
+         Rows 1
+         {
+          TextWidgetClass "ID BASE" {
+           ignorepointer 1
+           position 10 10
+           size 48 48
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Id"
+           font "gui/fonts/metronlight28"
+           "exact text" 1
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "Type Base" {
+           ignorepointer 1
+           position 10 10
+           size 48 48
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Type"
+           font "gui/fonts/metronlight28"
+           "exact text" 1
+           "text valign" center
+          }
+          TextWidgetClass "Emitter Base" {
+           ignorepointer 1
+           position 10 10
+           size 48 48
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Emitter"
+           font "gui/fonts/metronlight28"
+           "exact text" 1
+           "text valign" center
+          }
+          TextWidgetClass "Destination Base" {
+           ignorepointer 1
+           position 10 10
+           size 48 48
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Destination"
+           font "gui/fonts/metronlight28"
+           "exact text" 1
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass "Amount Base" {
+           ignorepointer 1
+           position 10 10
+           size 48 48
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Amount"
+           font "gui/fonts/metronlight28"
+           "exact text" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      FrameWidgetClass "Grid Frame Data" {
+       ignorepointer 1
+       position 0.2 0.24
+       size 0.571 0.43
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        ScrollWidgetClass "Scroll Data" {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         "Scrollbar V" 1
+         {
+          FrameWidgetClass DataGridFrame {
+           ignorepointer 1
+           position 0.01 -0.35
+           size 1 0.13
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            PanelWidgetClass "Data Grid Color" {
+             ignorepointer 1
+             color 0.1882 0.1882 0.1882 1
+             position 0 0
+             size 1 1
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             style DA_Smooth_Small_10px
+            }
+            GridSpacerWidgetClass "Data Transaction History" {
+             ignorepointer 1
+             color 0.1882 0.1882 0.1882 1
+             size 1 1
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             style Empty
+             content_halign center
+             content_valign center
+             Columns 5
+             Rows 1
+             {
+              TextWidgetClass ID {
+               ignorepointer 1
+               position 10 10
+               size 48 48
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               text "3425df"
+               font "gui/fonts/metron16"
+               "exact text" 1
+               "text halign" center
+               "text valign" center
+              }
+              TextWidgetClass Type {
+               ignorepointer 1
+               position 10 10
+               size 48 48
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               text "Deposit"
+               font "gui/fonts/metron16"
+               "exact text" 1
+               "text valign" center
+              }
+              TextWidgetClass Emitter {
+               ignorepointer 1
+               position 10 10
+               size 48 48
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               text "Dmitri"
+               font "gui/fonts/metron16"
+               "exact text" 1
+               "text valign" center
+              }
+              TextWidgetClass Destination {
+               ignorepointer 1
+               position 10 10
+               size 48 48
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               text "Self"
+               font "gui/fonts/metronbook16"
+               "exact text" 1
+               "text halign" center
+               "text valign" center
+              }
+              TextWidgetClass Amount {
+               ignorepointer 1
+               position 10 10
+               size 48 48
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               text "$ 1,000,000,000"
+               font "gui/fonts/metronbook16"
+               "exact text" 1
+               "text halign" center
+               "text valign" center
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
       }
      }
     }
