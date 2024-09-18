@@ -158,7 +158,7 @@ FrameWidgetClass MainFrame {
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       imageTexture "{55293DEC4F0D5A24}Workbench Images/Info.edds"
+       imageTexture "{55293DEC4F0D5A24}TraderPlusBanking/datasets/GUI/Info.edds"
        "clamp mode" clamp
        "stretch mode" stretch_w_h
       }
@@ -282,7 +282,7 @@ FrameWidgetClass MainFrame {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{3D1B8208F6FB3514}Workbench Images/IBAN.edds"
+         imageTexture "{3D1B8208F6FB3514}TraderPlusBanking/datasets/GUI/IBAN.edds"
          "clamp mode" clamp
          "stretch mode" stretch_w_h
         }
@@ -315,7 +315,7 @@ FrameWidgetClass MainFrame {
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       imageTexture "{11DD5B9820E64CF7}Workbench Images/Actions.edds"
+       imageTexture "{11DD5B9820E64CF7}TraderPlusBanking/datasets/GUI/Actions.edds"
        "clamp mode" clamp
        "stretch mode" stretch_w_h
       }
@@ -370,7 +370,7 @@ FrameWidgetClass MainFrame {
            vexactpos 0
            hexactsize 0
            vexactsize 0
-           imageTexture "{D9C414107C31E996}Workbench Images/Deposit.edds"
+           imageTexture "{D9C414107C31E996}TraderPlusBanking/datasets/GUI/Deposit.edds"
            "clamp mode" clamp
            "stretch mode" stretch_w_h
           }
@@ -398,7 +398,7 @@ FrameWidgetClass MainFrame {
            vexactpos 0
            hexactsize 0
            vexactsize 0
-           imageTexture "{131D4D9C8415C7CC}Workbench Images/Withdraw.edds"
+           imageTexture "{131D4D9C8415C7CC}TraderPlusBanking/datasets/GUI/Withdraw.edds"
            "clamp mode" clamp
            "stretch mode" stretch_w_h
           }
@@ -426,7 +426,7 @@ FrameWidgetClass MainFrame {
            vexactpos 0
            hexactsize 0
            vexactsize 0
-           imageTexture "{90307A93ECB1ABA6}Workbench Images/Transfer.edds"
+           imageTexture "{90307A93ECB1ABA6}TraderPlusBanking/datasets/GUI/Transfer.edds"
            "clamp mode" clamp
            "stretch mode" stretch_w_h
           }
@@ -457,7 +457,7 @@ FrameWidgetClass MainFrame {
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       imageTexture "{016B7D40D4568624}Workbench Images/TransactionHistory.edds"
+       imageTexture "{016B7D40D4568624}TraderPlusBanking/datasets/GUI/TransactionHistory.edds"
        mode opaque
        "clamp mode" clamp
        "stretch mode" stretch_w_h
@@ -509,10 +509,9 @@ FrameWidgetClass MainFrame {
            vexactpos 1
            hexactsize 1
            vexactsize 1
-           text "Id"
-           font "gui/fonts/metronlight28"
+           text "   Id"
+           font "gui/fonts/etelkatextpro22"
            "exact text" 1
-           "text halign" center
            "text valign" center
           }
           TextWidgetClass "Type Base" {
@@ -566,58 +565,47 @@ FrameWidgetClass MainFrame {
            text "Amount"
            font "gui/fonts/metronlight28"
            "exact text" 1
-           "text halign" center
            "text valign" center
           }
          }
         }
        }
       }
-      FrameWidgetClass "Grid Frame Data" {
+      ScrollWidgetClass "Scroll Data" {
        ignorepointer 1
-       position 0.2 0.24
-       size 0.571 0.43
-       halign center_ref
+       position 0.0143 0.24
+       size 0.5735 0.7253
+       halign right_ref
        hexactpos 0
        vexactpos 0
        hexactsize 0
        vexactsize 0
+       "Scrollbar V" 1
        {
-        ScrollWidgetClass "Scroll Data" {
+        GridSpacerWidgetClass DataGridFrame {
          ignorepointer 1
-         size 1 1
+         size 1 40
          halign center_ref
-         valign center_ref
          hexactpos 0
          vexactpos 0
          hexactsize 0
-         vexactsize 0
-         "Scrollbar V" 1
+         vexactsize 1
+         "Size To Content V" 1
+         Columns 1
          {
-          FrameWidgetClass DataGridFrame {
+          PanelWidgetClass "Data Grid Color" {
            ignorepointer 1
-           position 0.01 -0.35
-           size 1 0.13
+           color 0.1882 0.1882 0.1882 1
+           position 0 0
+           size 886 39
            halign center_ref
            valign center_ref
            hexactpos 0
            vexactpos 0
-           hexactsize 0
-           vexactsize 0
+           hexactsize 1
+           vexactsize 1
+           style DA_Smooth_Small_10px
            {
-            PanelWidgetClass "Data Grid Color" {
-             ignorepointer 1
-             color 0.1882 0.1882 0.1882 1
-             position 0 0
-             size 1 1
-             halign center_ref
-             valign center_ref
-             hexactpos 0
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             style DA_Smooth_Small_10px
-            }
             GridSpacerWidgetClass "Data Transaction History" {
              ignorepointer 1
              color 0.1882 0.1882 0.1882 1
@@ -642,10 +630,9 @@ FrameWidgetClass MainFrame {
                vexactpos 1
                hexactsize 1
                vexactsize 1
-               text "3425df"
+               text "   3425df"
                font "gui/fonts/metron16"
                "exact text" 1
-               "text halign" center
                "text valign" center
               }
               TextWidgetClass Type {
@@ -699,7 +686,6 @@ FrameWidgetClass MainFrame {
                text "$ 1,000,000,000"
                font "gui/fonts/metronbook16"
                "exact text" 1
-               "text halign" center
                "text valign" center
               }
              }
